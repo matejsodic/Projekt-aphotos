@@ -1,0 +1,604 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Ubuntu';
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+#banner {
+    background: linear-gradient( rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3) ), url(slike/ny23.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    max-width: 100%;
+    height: 550px;
+}
+
+.inner{
+    width: 100%;
+    overflow: hidden;
+    padding-top: 10px;
+}
+
+ .inner a h1{
+    color: white;
+    float: left;
+    margin-top:5px;
+    padding-left: 20px;
+    font-family: 'Poiret One', cursive;
+    font-weight: bold;
+}
+
+.inner a h1:hover{
+    text-shadow: 2px 2px 4px #000000;
+    color: #ECEFF1;
+}
+
+.nav{
+    float:right;
+    margin-top: 0px;
+    margin-right: 5px;
+    padding:15px;
+}
+
+.nav ul{
+    list-style: none;
+}
+
+.nav ul li{
+    display: inline-block;
+    float: left;
+}
+
+.nav ul li a{
+    margin: 0px 0px;
+    padding: 10px 25px;
+    color:white;
+    text-decoration: none;
+}
+
+.nav a:hover{
+    background-color:rgba(0, 0, 0, 0.5);
+    transition: .5s;
+}
+
+#active{
+    border-bottom: 2px solid white;
+}
+
+#signup{
+     border:2px solid white;
+}
+
+#signup:hover{
+    background-color:rgba(0, 0, 0, 0.5);
+    color: white;
+}
+
+.content{
+    width: 100%;
+    height: 680px;
+}
+
+.welcome{
+    color: #212121;
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 20px;
+}
+
+.welcome h1{
+    font-size: 60px;
+}
+
+.text{
+    width: 50%;
+    margin-left: 25%;
+    margin-top: 10px;
+    line-height: 25px;
+}
+    
+.col-md-4{
+    width: 32.9%;
+    height: 250px;
+    margin: 2px;
+    margin-top: 5px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 25px;
+    color: white;  
+    padding: 0;
+}
+
+#jedan{
+    background-image: url(web/cities.jpg);
+    background-size: cover;
+}
+
+#dva{
+    background-image: url(web/nature.jpg);
+    background-size: cover;
+}
+
+#tri{
+    background-image: url(web/food.jpg);
+    background-size: cover;
+}
+   
+#cetiri{
+    background-image: url(web/girl.jpg);
+    background-size: cover;
+    
+}
+  
+#pet{
+    background-image: url(web/animals.jpg);
+    background-size: cover; 
+}
+   
+#sest{
+    background-image: url(web/cars.jpg);
+    background-size: cover; 
+}
+
+
+#jedan a {
+    display: block;
+    height: 100%;
+    text-decoration: none;
+    color: white;
+}
+
+#jedan a:hover {
+    background-color:rgba(0, 0, 0, 0.5);
+    color: white;
+    transition: 0.5s;
+}
+
+#dva a {
+    display: block;
+    height: 100%;
+    text-decoration: none;
+    color: white;	
+}
+
+#dva a:hover {
+    background-color:rgba(0, 0, 0, 0.5);
+    color: white;
+    transition: 0.5s;
+}
+
+#tri a {
+    display: block;
+    height: 100%;
+    text-decoration: none;
+    color: white;	
+}
+
+#tri a:hover {
+    background-color:rgba(0, 0, 0, 0.5);
+    color: white;
+    transition: 0.5s;
+}
+
+#cetiri a {
+    display: block;
+    height: 100%;
+    text-decoration: none;
+    color: white;	
+}
+
+#cetiri a:hover {
+    background-color:rgba(0, 0, 0, 0.5);
+    color: white;
+    transition: 0.5s;
+}
+
+#pet a {
+    display: block;
+    height: 100%;
+    text-decoration: none;
+    color: white;	
+}
+
+#pet a:hover {
+    background-color:rgba(0, 0, 0, 0.5);
+    color: white;
+    transition: 0.5s;
+}
+
+#sest a {
+    display: block;
+    height: 100%;
+    text-decoration: none;
+    color: white;
+}
+
+#sest a:hover {
+    background-color:rgba(0, 0, 0, 0.5);
+    color: white;
+    transition: 0.5s;
+}
+
+.newsletterwrapper{ 
+    margin: 1% 0;
+    margin-top: 300px;
+    overflow: hidden;
+}
+
+.newsletter{
+    margin: 0 auto;
+    text-align: center;
+    width: 50%;
+}
+
+.newsletter h2{
+    color: white;
+    text-align: left;
+    margin: 8px 60px;
+    font-size: 35px;
+}
+
+.newsletter p{
+    color: white;
+    text-align: right;
+    margin: 8px 60px;
+    font-size: 18px;
+}
+
+#email {   
+    width: 70%;
+    padding: 10px 3%;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+#submit{
+    width:15%;
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#submit:hover {
+    background-color: #64DD17;
+    transition: 0.5s;
+}
+
+.aboutus{
+    width: 100%;
+    height: 300px;
+    clear: both;
+    overflow: hidden;
+}
+
+.welcomebot{
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+    color: #212121;
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 20px;
+}
+
+.welcomebot h1{
+    font-size: 60px;
+    text-align: center;
+}
+
+.textbot{
+    width: 50%;
+    margin-left: 25%;
+    margin-top: 10px;
+    line-height: 25px;
+    text-align: center;
+}
+
+footer{
+    width: 100%;
+    
+    background: #455A64; 
+    background: -webkit-linear-gradient(#20354d, #4b7cb4); 
+    background: -o-linear-gradient(#20354d, #4b7cb4); 
+    background: -moz-linear-gradient(#20354d, #4b7cb4); 
+    background: linear-gradient(#20354d, #4b7cb4); 
+    clear: both;
+}
+
+.col-md-12{
+    text-align: center;
+    color: white;
+}
+
+.iconz{
+    text-align:  center;
+    margin-top: 20px;
+    
+}
+
+.iconz a{
+    margin: 0 15px;
+}
+
+.iconz #face:hover{
+    background-color: royalblue;
+    border-radius: 50%;
+}
+
+.iconz #insta:hover{
+    background:background: -webkit-radial-gradient(32% 106%, circle cover, rgb(255, 225, 125) 0%, rgb(255, 205, 105) 10%, rgb(250, 145, 55) 28%, rgb(235, 65, 65) 42%, transparent 82%), -webkit-linear-gradient(-45deg, rgb(35, 75, 215) 12%, rgb(195, 60, 190) 58%);
+	background: -moz-radial-gradient(32% 106%, circle cover, rgb(255, 225, 125) 0%, rgb(255, 205, 105) 10%, rgb(250, 145, 55) 28%, rgb(235, 65, 65) 42%, transparent 82%), -moz-linear-gradient(-45deg, rgb(35, 75, 215) 12%, rgb(195, 60, 190) 58%);
+	background: -ms-radial-gradient(32% 106%, circle cover, rgb(255, 225, 125) 0%, rgb(255, 205, 105) 10%, rgb(250, 145, 55) 28%, rgb(235, 65, 65) 42%, transparent 82%), -ms-linear-gradient(-45deg, rgb(35, 75, 215) 12%, rgb(195, 60, 190) 58%);
+	background: -o-radial-gradient(32% 106%, circle cover, rgb(255, 225, 125) 0%, rgb(255, 205, 105) 10%, rgb(250, 145, 55) 28%, rgb(235, 65, 65) 42%, transparent 82%), -o-linear-gradient(-45deg, rgb(35, 75, 215) 12%, rgb(195, 60, 190) 58%);
+	background: radial-gradient(circle farthest-corner at 32% 106%, rgb(255, 225, 125) 0%, rgb(255, 205, 105) 10%, rgb(250, 145, 55) 28%, rgb(235, 65, 65) 42%, transparent 82%), linear-gradient(135deg, rgb(35, 75, 215) 12%, rgb(195, 60, 190) 58%);
+    border-radius: 28%;
+}
+
+.iconz #twitter:hover{
+    background-color: deepskyblue;
+    border-radius: 50%;
+}
+
+#footerzwrap{
+    margin-top: 15px;
+}
+
+.footerz{
+    clear: both;
+    padding: 5px;
+    color: white;
+    font-size: 18px;
+    text-align: center;
+    margin-top: 50px;
+}
+
+#banner2{
+    width: 100%;
+    background: #455A64; 
+    background: -webkit-linear-gradient(#20354d, #4b7cb4); 
+    background: -o-linear-gradient(#20354d, #4b7cb4); 
+    background: -moz-linear-gradient(#20354d, #4b7cb4); 
+    background: linear-gradient(#20354d, #4b7cb4); 
+    clear: both;
+}
+
+.content2{
+    width: 100%;
+    height: 593px;
+}
+
+.signupform{
+    width: 70%;
+    height: 600px;
+    margin: 0 auto;
+    padding-top: 1px;
+}
+
+.formaa{
+    width: 50%;
+    margin: 0 auto;
+    margin-top: 110px;
+    text-align: center;
+    border: 2px solid #2f466a;
+    overflow: hidden;
+    padding: 10px;
+}
+
+.formaa h2{
+    font-weight: bold;
+    color: #2f466a;
+}
+
+#username, #password, #password2, #email2{
+    padding: 10px 5px;
+    margin: 5px 0;
+    width: 90%;
+    border-radius: 5px;
+    border: 1px solid #2f466a;
+}
+
+#signupnow{
+    padding: 10px 20px;
+    float: left;
+    margin:10px 5px 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    
+}
+
+#cancelnow{
+    padding: 10px 10px;
+    float: left;
+    margin:10px 0 10px 0px;
+    background-color:indianred;
+    color: white;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+      
+}
+
+#signupnow:hover{
+    background-color: #00cc00;
+    box-shadow: 1px 1px 1px #000000;
+    transition: .2s;
+}
+
+#cancelnow:hover{
+    background-color: #cc0000;
+    box-shadow: 1px 1px 1px #000000;
+    transition: .2s;
+}
+
+.formaa p{
+    clear: both;
+}
+
+.content3{
+    width: 100%;
+    height: 820px;
+}
+
+.contactform{
+    width: 50%;
+    height: 820px;
+    float: left;
+    margin:10px 0px;
+    border-left: 2px solid #2f466a;
+}
+
+.contactform2{
+    width: 100%;
+    margin-top: 50px;
+    text-align: center;
+    overflow: hidden;
+}
+
+.contactform2 h2{
+    font-weight: bold;
+    color: #2f466a;
+}
+
+#name, #email3{
+    padding: 10px 5px;
+    margin: 5px 0;
+    width: 80%;
+    border-radius: 5px;
+    border: 1px solid #2f466a;
+}
+
+#country{
+    padding: 10px 5px;
+    margin: 5px 0;
+    width: 80%;
+    border-radius: 5px;
+    border: 1px solid #2f466a;
+}
+
+#txtarea{
+    width: 80%;
+    margin: 5px 0;
+    border-radius: 5px;
+    border: 1px solid #2f466a;
+    padding: 5px 5px;
+}
+
+#submit3{
+    padding: 10px 20px;
+    width: 40%;
+    margin:5px 0;
+    background-color: #4CAF50;
+    color: white;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    clear: both;
+}
+
+.contactcc{
+    width: 50%;
+    height: 820px;
+    float: left;
+    margin:10px 0px;
+}
+
+.contactccc{
+    width: 80%;
+    margin-top: 50px;
+    margin-left: 50px;
+    overflow: hidden;
+}
+
+.contactccc h2{
+    margin-left: 10px;
+    font-weight: bold;
+    color: #2f466a;
+}
+
+.prvired{
+    width: 100%
+    height:500px;
+}
+
+.prvired p{
+    margin-left: 10px;
+    font-weight: bold;
+}
+
+.iconz2 img{
+    margin:0px 10px;
+}
+
+.iconz2 p{
+    margin-left: 10px;
+    font-weight: bold;
+}
+
+.iconz3 img{
+    vertical-align: middle;
+}
+
+.iconz3 span{
+    font-weight: bold;
+    color: #5E35B1;
+}
+
+.kek a{
+    text-decoration: none;
+    color: #5E35B1;
+}
+
+.kek a:hover{
+    text-decoration: underline;
+}
+
+#submit3:hover{
+    background-color: #00cc00;
+    box-shadow: 1px 1px 1px #000000;
+    transition: .2s;
+}
+
+.karta{
+    margin-left: 50px;
+}
+
+.karta h2{
+    font-weight: bold;
+    color: #2f466a;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
