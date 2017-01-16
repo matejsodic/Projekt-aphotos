@@ -1,5 +1,10 @@
 <?php
-
+ 
+ 
+	# Stop Hacking attempt
+	if(!defined('__APP__')) {
+		die("Hacking attempt");
+	}
 	include "config.php";
 	
 	# Connect to MySQL database

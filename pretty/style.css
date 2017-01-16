@@ -28,8 +28,7 @@ body{
     float: left;
     margin-top:5px;
     padding-left: 20px;
-    font-family: 'Poiret One', cursive;
-    font-weight: bold;
+    
 }
 
 .inner a h1:hover{
@@ -41,7 +40,7 @@ body{
     float:right;
     margin-top: 0px;
     margin-right: 5px;
-    padding:15px;
+    padding:5px;
 }
 
 .nav ul{
@@ -61,6 +60,34 @@ body{
 }
 
 .nav a:hover{
+    background-color:rgba(0, 0, 0, 0.5);
+    transition: .5s;
+}
+
+.nav2{
+    float:right;
+    margin-top: 10px;
+    margin-right: 5px;
+    padding:5px;
+}
+
+.nav2 ul{
+    list-style: none;
+}
+
+.nav2 ul li{
+    display: inline-block;
+    float: left;
+}
+
+.nav2 ul li a{
+    margin: 0px 0px;
+    padding: 10px 25px;
+    color:white;
+    text-decoration: none;
+}
+
+.nav2 a:hover{
     background-color:rgba(0, 0, 0, 0.5);
     transition: .5s;
 }
@@ -87,11 +114,12 @@ body{
     color: #212121;
     text-align: center;
     margin: 0 auto;
-    margin-top: 20px;
+    margin-top: 10px;
 }
 
 .welcome h1{
     font-size: 60px;
+    margin-top: 0px;
 }
 
 .text{
@@ -144,12 +172,29 @@ body{
     background-size: cover; 
 }
 
+#sedam{
+    background-image: url(web/techno.jpg);
+    background-size: cover; 
+}
+
+#osam{
+    background-image: url(web/fun.jpg);
+    background-size: cover; 
+}
+
+#devet{
+    background-image: url(web/sport.jpg);
+    background-size: cover; 
+}
+
 
 #jedan a {
     display: block;
     height: 100%;
     text-decoration: none;
     color: white;
+    text-shadow: 1px 1px 1px black;
+    
 }
 
 #jedan a:hover {
@@ -162,7 +207,8 @@ body{
     display: block;
     height: 100%;
     text-decoration: none;
-    color: white;	
+    color: white;
+    text-shadow: 1px 1px 1px black;	
 }
 
 #dva a:hover {
@@ -175,7 +221,8 @@ body{
     display: block;
     height: 100%;
     text-decoration: none;
-    color: white;	
+    color: white;
+    text-shadow: 1px 1px 1px black;	
 }
 
 #tri a:hover {
@@ -188,7 +235,8 @@ body{
     display: block;
     height: 100%;
     text-decoration: none;
-    color: white;	
+    color: white;
+    text-shadow: 1px 1px 1px black;	
 }
 
 #cetiri a:hover {
@@ -201,7 +249,8 @@ body{
     display: block;
     height: 100%;
     text-decoration: none;
-    color: white;	
+    color: white;
+    text-shadow: 1px 1px 1px black;
 }
 
 #pet a:hover {
@@ -215,9 +264,52 @@ body{
     height: 100%;
     text-decoration: none;
     color: white;
+    text-shadow: 1px 1px 1px black;
 }
 
 #sest a:hover {
+    background-color:rgba(0, 0, 0, 0.5);
+    color: white;
+    transition: 0.5s;
+}
+
+#sedam a {
+    display: block;
+    height: 100%;
+    text-decoration: none;
+    color: white;
+    text-shadow: 1px 1px 1px black;
+}
+
+#sedam a:hover {
+    background-color:rgba(0, 0, 0, 0.5);
+    color: white;
+    transition: 0.5s;
+}
+
+#osam a {
+    display: block;
+    height: 100%;
+    text-decoration: none;
+    color: white;
+    text-shadow: 1px 1px 1px black;
+}
+
+#osam a:hover {
+    background-color:rgba(0, 0, 0, 0.5);
+    color: white;
+    transition: 0.5s;
+}
+
+#devet a {
+    display: block;
+    height: 100%;
+    text-decoration: none;
+    color: white;
+    text-shadow: 1px 1px 1px black;
+}
+
+#devet a:hover {
     background-color:rgba(0, 0, 0, 0.5);
     color: white;
     transition: 0.5s;
@@ -231,6 +323,7 @@ body{
 
 .newsletter{
     margin: 0 auto;
+    margin-top: 40px;
     text-align: center;
     width: 50%;
 }
@@ -323,18 +416,29 @@ footer{
 .iconz{
     text-align:  center;
     margin-top: 20px;
-    
+    border-radius: 50%;
 }
 
 .iconz a{
     margin: 0 15px;
+    border-radius: 50%;
 }
 
+.iconz #face{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
 .iconz #face:hover{
     background-color: royalblue;
     border-radius: 50%;
 }
 
+.iconz #insta{
+    width: 50px;
+    height: 50px;
+    border-radius: 28%;
+}
 .iconz #insta:hover{
     background:background: -webkit-radial-gradient(32% 106%, circle cover, rgb(255, 225, 125) 0%, rgb(255, 205, 105) 10%, rgb(250, 145, 55) 28%, rgb(235, 65, 65) 42%, transparent 82%), -webkit-linear-gradient(-45deg, rgb(35, 75, 215) 12%, rgb(195, 60, 190) 58%);
 	background: -moz-radial-gradient(32% 106%, circle cover, rgb(255, 225, 125) 0%, rgb(255, 205, 105) 10%, rgb(250, 145, 55) 28%, rgb(235, 65, 65) 42%, transparent 82%), -moz-linear-gradient(-45deg, rgb(35, 75, 215) 12%, rgb(195, 60, 190) 58%);
@@ -344,6 +448,11 @@ footer{
     border-radius: 28%;
 }
 
+.iconz #twitter{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
 .iconz #twitter:hover{
     background-color: deepskyblue;
     border-radius: 50%;
@@ -353,6 +462,10 @@ footer{
     margin-top: 15px;
 }
 
+#footerzwrap h3{
+    margin-top: 10px;
+}
+
 .footerz{
     clear: both;
     padding: 5px;
@@ -360,6 +473,10 @@ footer{
     font-size: 18px;
     text-align: center;
     margin-top: 50px;
+}
+
+.footerz p{
+    margin-bottom: 0px;
 }
 
 #banner2{
@@ -375,6 +492,7 @@ footer{
 .content2{
     width: 100%;
     height: 593px;
+
 }
 
 .signupform{
@@ -452,6 +570,11 @@ footer{
     height: 820px;
 }
 
+.content4{
+    width: 100%;
+    height: 300px;
+}
+
 .contactform{
     width: 50%;
     height: 820px;
@@ -460,19 +583,26 @@ footer{
     border-left: 2px solid #2f466a;
 }
 
-.contactform2{
+.adminedit{
+    width: 50%;
+    min-height: 500px;
+    float: left;
+    margin:10px 0px;
+    border-left: 2px solid #2f466a;
+}
+.contactform2, .adminedit2{
     width: 100%;
     margin-top: 50px;
     text-align: center;
     overflow: hidden;
 }
 
-.contactform2 h2{
+.contactform2 h2, .adminedit2 h2{
     font-weight: bold;
     color: #2f466a;
 }
 
-#name, #email3{
+#name, #email3, #msgname{
     padding: 10px 5px;
     margin: 5px 0;
     width: 80%;
@@ -510,9 +640,23 @@ footer{
 
 .contactcc{
     width: 50%;
-    height: 820px;
+    min-height: 820px;
     float: left;
     margin:10px 0px;
+}
+
+.adminpage{
+    width: 50%;
+    min-height: 300px;
+    float: left;
+    margin:10px 0px;0
+}
+
+.uploadform{
+    width: 80%;
+    margin-top: 50px;
+    margin-left: 50px;
+    overflow: hidden;
 }
 
 .contactccc{
@@ -522,7 +666,7 @@ footer{
     overflow: hidden;
 }
 
-.contactccc h2{
+.contactccc h2, .uploadform h2{
     margin-left: 10px;
     font-weight: bold;
     color: #2f466a;
@@ -580,14 +724,85 @@ footer{
     color: #2f466a;
 }
 
+table, th, td {
+   border: 1px solid black;
+   padding: 5px;
+}
 
+table{
+    margin:0 auto;
+}
 
+tr:nth-child(even) {
+    background-color: #f2f2f2
+}
 
+th{
+    background-color: #4b7cb4;
+}
 
+#upimage{
+    margin:0 auto;
+}
 
+.prvired h2{
+    text-align: center;
+}
 
+#imagename , #categoryname{
+    margin:0 auto;
+    margin-left: 150px;
+    padding: 5px;
+}
 
+#categories{
+    margin:0 auto;
+    margin-left: 150px;
+    margin-top: 10px;
+    width: 198px;
+}
 
+#submit6, #submit7{
+    margin-left: 200px;
+    margin-top: 10px;
+    padding: 2px;
+}
+
+.container h3{
+    margin: 0;
+    color: 
+}
+
+.gallery-img{
+    margin:5px;
+}
+
+.nav3{
+    float: left;
+    margin-right: 25px;
+    border: 2px solid #4b7cb4;
+    border-radius: 5px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 10px;
+}
+
+.nav3 ul{
+    margin-left: 5px;
+    margin-top: 5px;
+    text-decoration: none;
+    list-style: none;
+}
+
+.nav3 h3 {
+    margin-right: 5px;
+    margin-left: 5px;
+}
+
+.gallerycontainer{
+    overflow: hidden;
+    margin-top: 5px;
+}
 
 
 

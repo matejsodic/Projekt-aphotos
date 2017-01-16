@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 31, 2016 at 01:31 AM
+-- Generation Time: Jan 16, 2017 at 10:30 PM
 -- Server version: 10.1.19-MariaDB
 -- PHP Version: 7.0.13
 
@@ -19,6 +19,32 @@ SET time_zone = "+00:00";
 --
 -- Database: `aphotos`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `categories`
+--
+
+CREATE TABLE `categories` (
+  `id` int(11) NOT NULL,
+  `name` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `categories`
+--
+
+INSERT INTO `categories` (`id`, `name`) VALUES
+(1, 'Architecture'),
+(2, 'Nature'),
+(3, 'Food'),
+(4, 'People'),
+(5, 'Animals'),
+(6, 'Cars'),
+(7, 'Technology'),
+(8, 'Entertainment'),
+(9, 'Sports');
 
 -- --------------------------------------------------------
 
@@ -286,15 +312,54 @@ INSERT INTO `countries` (`id`, `country_code`, `country_name`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `images`
+--
+
+CREATE TABLE `images` (
+  `id` int(11) NOT NULL,
+  `name` varchar(255) NOT NULL,
+  `file` varchar(255) NOT NULL,
+  `category_id` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `images`
+--
+
+INSERT INTO `images` (`id`, `name`, `file`, `category_id`) VALUES
+(46, 'Frozen throne', '2.jpg', 8),
+(47, 'Balls', '23.jpg', 8),
+(49, 'BMW', '2009-BMW-E92-M3-Darth-Maul-by-MW-Design-Technik-Front-And-Side-1920x1440.jpg', 6),
+(50, 'Porsche', '2009-TechArt.jpg', 6),
+(51, 'Funny', '1009.jpg', 4),
+(52, 'Bike', '7249ye6[1].jpg', 6),
+(53, 'Equalizer', 'Equalizer (2).jpg', 7),
+(55, 'White tiger', 'White_Tiger_28Panthera_Tigris29 (2).jpg', 5),
+(56, 'Beach', 'wallpaper-49663 (2).jpg', 2),
+(58, 'Pool', 'wallpaper-172811.jpg', 1),
+(59, 'Shadow', 'lanikai-beach (2).jpg', 2),
+(60, 'nice', '1082150-1366x768-paradise.jpg', 2),
+(61, 'tropical', 'tropical (2).jpg', 2),
+(62, 'sunset', 'wallhaven-335944.jpg', 2),
+(63, 'cave', 'wallpaper-476.jpg', 2),
+(64, 'ee', '691760-1366x768-2410802846_f92edd891a_o.jpg', 2),
+(65, 'bb', 'beach.jpg', 2),
+(66, 'fantasy', 'fantasy-087.jpg', 2),
+(75, 'Surf', 'wallpaper-567383 (2).jpg', 9);
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `message`
 --
 
 CREATE TABLE `message` (
-  `msg_id` int(11) NOT NULL,
-  `msg_name` varchar(255) NOT NULL,
-  `msg_email` varchar(255) NOT NULL,
-  `msg_country` varchar(255) NOT NULL,
-  `msg_msg` varchar(600) NOT NULL,
+  `id` int(11) NOT NULL,
+  `name` varchar(255) NOT NULL,
+  `username` varchar(255) NOT NULL,
+  `email` varchar(255) NOT NULL,
+  `country` varchar(255) NOT NULL,
+  `msg` varchar(600) NOT NULL,
   `date_submitted` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -302,8 +367,28 @@ CREATE TABLE `message` (
 -- Dumping data for table `message`
 --
 
-INSERT INTO `message` (`msg_id`, `msg_name`, `msg_email`, `msg_country`, `msg_msg`, `date_submitted`) VALUES
-(7, 'Matej', 'matej@gmail.com', 'HR', 'aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa', '2016-12-30 11:31:34');
+INSERT INTO `message` (`id`, `name`, `username`, `email`, `country`, `msg`, `date_submitted`) VALUES
+(7, 'Matej', '', 'matej@gmail.com', 'HR', 'aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa', '2016-12-30 11:31:34'),
+(9, 'Upit', 'Matej', 'matej@gmail.com', 'AF', 'Question : asdfsakjdlfhaslkdjfhaslkdjfhaskldjfhaslkdjfhksdfjhsdklfjhsdflkjsafksadhflkjsdafhsdklajfhklsajdfhjsdklf\r\nasdfsakjdlfhaslkdjfhaslkdjfhaskldjfhaslkdjfhksdfjhsdklfjhsdflkjsafksadhflkjsdafhsdklajfhklsajdfhjsdklf\r\nasdfsakjdlfhaslkdjfhaslkdjfhaskldjfhaslkdjfhksdfjhsdklfjhsdflkjsafksadhflkjsdafhsdklajfhklsajdfhjsdklf\r\n\r\nMatej', '2017-01-14 15:54:05');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `newsletter`
+--
+
+CREATE TABLE `newsletter` (
+  `id` int(11) NOT NULL,
+  `email` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `newsletter`
+--
+
+INSERT INTO `newsletter` (`id`, `email`) VALUES
+(1, 'soda@gmailc.om'),
+(2, 'nothanks@gmail.com');
 
 -- --------------------------------------------------------
 
@@ -312,11 +397,10 @@ INSERT INTO `message` (`msg_id`, `msg_name`, `msg_email`, `msg_country`, `msg_ms
 --
 
 CREATE TABLE `users` (
-  `user_id` int(11) NOT NULL,
+  `id` int(11) NOT NULL,
   `username` varchar(255) NOT NULL,
-  `user_email` varchar(255) NOT NULL,
-  `user_pass` varchar(255) NOT NULL,
-  `user_img` varchar(255) NOT NULL,
+  `email` varchar(255) NOT NULL,
+  `pass` varchar(255) NOT NULL,
   `date_created` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   `user_archive` enum('Y','N') NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
@@ -325,12 +409,19 @@ CREATE TABLE `users` (
 -- Dumping data for table `users`
 --
 
-INSERT INTO `users` (`user_id`, `username`, `user_email`, `user_pass`, `user_img`, `date_created`, `user_archive`) VALUES
-(2, 'soda', 'soda@gmail.com', '$2y$12$VGU6zHDgTUBD7zAZQZbqIOj7edRGYE4KlzcrODnqPgtJq6yZWrr/K', '', '2016-12-29 17:17:30', 'Y');
+INSERT INTO `users` (`id`, `username`, `email`, `pass`, `date_created`, `user_archive`) VALUES
+(2, 'soda', 'soda@gmail.com', '$2y$12$VGU6zHDgTUBD7zAZQZbqIOj7edRGYE4KlzcrODnqPgtJq6yZWrr/K', '2016-12-29 17:17:30', 'Y'),
+(4, 'kek', 'kek@gmail.com', '$2y$12$DNwlpC3gFdVtaxeVGZnXkOQowjo9SXZFV39z7.pSJIeK/NOQTmOfy', '2017-01-13 14:43:12', 'Y');
 
 --
 -- Indexes for dumped tables
 --
+
+--
+-- Indexes for table `categories`
+--
+ALTER TABLE `categories`
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `countries`
@@ -339,31 +430,58 @@ ALTER TABLE `countries`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `images`
+--
+ALTER TABLE `images`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `message`
 --
 ALTER TABLE `message`
-  ADD PRIMARY KEY (`msg_id`);
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `newsletter`
+--
+ALTER TABLE `newsletter`
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `users`
 --
 ALTER TABLE `users`
-  ADD PRIMARY KEY (`user_id`);
+  ADD PRIMARY KEY (`id`);
 
 --
 -- AUTO_INCREMENT for dumped tables
 --
 
 --
+-- AUTO_INCREMENT for table `categories`
+--
+ALTER TABLE `categories`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+--
+-- AUTO_INCREMENT for table `images`
+--
+ALTER TABLE `images`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=80;
+--
 -- AUTO_INCREMENT for table `message`
 --
 ALTER TABLE `message`
-  MODIFY `msg_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+--
+-- AUTO_INCREMENT for table `newsletter`
+--
+ALTER TABLE `newsletter`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 --
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

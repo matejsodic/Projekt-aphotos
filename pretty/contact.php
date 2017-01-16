@@ -8,23 +8,23 @@
                             <div class="iconz2">
                                 <div class="iconz3">
                                     <img id="twittericon" src="slike/twicon.png" alt="Twitter" height="25" width="25">
-                                    <span class="kek" style=""><a href="#">/amazingphotos</a></span>
+                                    <span class="kek" style=""><a href="#">/imagesrc</a></span>
                                 </div>
                                 <br>
                                 <div class="iconz3">
                                     <img id="instaicon" src="slike/instaicon.png" alt="Instagram" height="25" width="25">
-                                    <span class="kek" style=""><a href="#">@amazingphotos</a></span>
+                                    <span class="kek" style=""><a href="#">@imagesrc</a></span>
                                 </div>
                                 <br>
                                 <div class="iconz3">
                                     <img id="faceicon" src="slike/fbicon.png" alt="Face" height="25" width="25">
-                                    <span class="kek" style=""><a href="#">/amazingphotos</a></span>
+                                    <span class="kek" style=""><a href="#">/imagesrc</a></span>
                                 </div>
                                 <br>
                                 <p>Or through our email</p>
                                 <div class="iconz3">
                                     <img id="emailicon" src="slike/emailicon.png" alt="Email" height="25" width="25">
-                                    <span style="">amazingphotos@gmail.com</span>
+                                    <span style="">imagesrc@gmail.com</span>
                                 </div>
                             </div>
                         </div>
@@ -36,12 +36,19 @@
                 </div>
                 <div class="contactform">
                     <div class="contactform2">   
+                     <?php
+                    if (isset($_SESSION['message'])) {
+                        print $_SESSION['message'];
+                        unset($_SESSION['message']);
+                    }
+                    ?>
                         <h2>Contact Us Directly</h2>
                         <form action="trigger.php"  name="contactf" method="post" enctype="multipart/form-data">
                             <input type="hidden" id="action" name="action" value="contact">
-                            <input type="text" id="name" name="name"  placeholder="Name"/><br />
-                            <input type="email" id="email3" name="email3"  placeholder="E-mail"/><br />
-                              <select name="country" id="country">
+                            <input type="text" id="msgname" name="msgname"  placeholder="Message Name" required/><br />
+                            <input type="text" id="name" name="name"  placeholder="Your Name" required/><br />
+                            <input type="email" id="email3" name="email3"  placeholder="E-mail" required/><br />
+                              <select name="country" id="country" required>
                                         <option value="">Država</option>';
 
                                         <?php
@@ -56,7 +63,7 @@
                                         ?>
 
                                     </select>
-                            <textarea id="txtarea" name="message" placeholder="Write us a message" rows="10" cols="70"></textarea>
+                            <textarea id="txtarea" name="message" placeholder="Write us a message" rows="10" cols="70" required></textarea>
                             <input type="submit" id="submit3" value="Submit" />
                         </form>
                     </div>

@@ -15,7 +15,7 @@
                             <input type="password" id="password" name="password"  placeholder="Password"/><br />
                             <input type="submit" id="signupnow" value="Sign In" />
                         </form>
-                        <p>Don't have an account? <a href="signup.php">Click here to Sign Up!</a></p>
+                        <p>Don't have an account? <a href="index.php?menu=4">Click here to Sign Up!</a></p>
                     </div>
                 </div>
             </div>
